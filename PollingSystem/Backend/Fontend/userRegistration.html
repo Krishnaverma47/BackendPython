@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card ">
+          <div class="card-header">
+            User Registration
+          </div>
+          <!--  -->
+          <div class="card-body">
+            <!-- " -->
+            <form action="/submitform" method='POST' id="Registration" onsubmit="UserData()">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="userEmail">User Name</span>
+                <input type="text" class="form-control" name="user" id="username" placeholder="Enter Your Username"
+                  required>
+              </div>
+              <button class="btn btn-primary mb-2" type="submit" id='btnGetResponse'>Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript">
+
+
+    // javascript code for redirecting qusetion.html page 
+    function UserData() {
+      let input = document.getElementById('username').value;
+      let hrx = new XMLHttpRequest();
+      hrx.open('GET', 'http://127.0.0.1:8000', true)
+      hrx.onload = function () {
+        if (this.status === 200) {
+          window.location.href = '/question';
+        }
+        else {
+          console.log('Page not found');
+        }
+      }
+      hrx.send(input);
+    }
+  </script>
+</body>
+
+</html>

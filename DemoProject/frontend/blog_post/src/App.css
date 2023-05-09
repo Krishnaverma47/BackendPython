@@ -1,0 +1,52 @@
+.main {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+}
+
+.btn{
+  height: 40px;
+  width: 120px;
+  padding: 5px 18px;
+  font-size: 18px;
+  border-radius: 2px;
+}
+.btn:hover{
+  
+  font-size: 18px;
+  border: 2px solid gray;
+  border-radius: 2px;
+  background-color: transparent;
+  color: darkcyan !important;
+}
+
+.navbar-background{
+  background-color: #0081B4;
+}
+.nav-link{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modalBackground{
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer{
+  border-radius: 0px;
+  height: 435px;
+  background-color: white;
+  box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}

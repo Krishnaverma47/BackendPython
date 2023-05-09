@@ -1,0 +1,71 @@
+    commands related to database
+		
+		=> View all database
+			show dbs
+		
+		=> Create new or switch to another database
+			use <databaseName>
+			
+		=> View current database
+			db
+			
+		=> delete database
+			db.dropDatabase()
+			
+			
+	commands related to Collections/Table
+	
+		=> View all collections
+			show collections
+		
+		=> Create a new collection
+			db.createCollection('<NameOfCollection>')
+		
+		=> Delete collections 
+			db.<collectionName>.drop()
+			
+	commands related to field/Row
+	
+		=>Show all row inside table
+			db.<collectionName>.find()
+			
+		=>Show all row inside table in pretty/beautiful form
+			db.<collectionName>.find().pretty()
+		
+		=> Insert data in one row 
+			db.<collectionName>.insert({
+				'name':'Krishna Verma',
+				'language':'Python',
+				'district':'Varanasi',
+				'State':'Uttar Pradesh'
+			})
+			
+		=> Insert data in many row
+			db.<collectionName>.insertMany([
+			{
+				'name':'Krishna Verma',
+				'language':'Python',
+				'district':'Varanasi',
+				'State':'Uttar Pradesh'
+			},
+			{
+				'name':'Ajay Verma',
+				'language':'C++',
+				'district':'Varanasi',
+				'State':'Uttar Pradesh'
+			},
+			{
+				'name':'Abhay Verma',
+				'language':'Javascript',
+				'district':'Varanasi',
+				'State':'Uttar Pradesh'
+			}
+			])
+			
+		=> Search all the row with specific name or keyword
+			db.<databaseName>.find({'language':'Pyhon'}).pretty()
+			
+		
+			
+		
+		
